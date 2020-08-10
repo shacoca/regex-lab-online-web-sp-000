@@ -34,6 +34,8 @@ def valid_phone_number?(phone)
   if number_array[0].length == 3
     if (number_array[0][0].length == 3) && (number_array[0][1].length == 3) && (number_array[0][2].length == 4)
       true
+    else
+      false
     end
   else
     false
