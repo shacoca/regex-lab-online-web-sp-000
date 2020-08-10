@@ -28,9 +28,10 @@ def valid_phone_number?(phone)
   # valid_numbers = ["2438894546", "(718)891-1313", "234 435 9978", "(800)4261134"]
   # 2438894546 (718)891-1313 234 435 9978 (800)4261134
   number_array = phone.scan(/.*(\d{3}).*(\d{3}).*(\d{4})/)
-#  if number_array.length == 3
-  if (number_array[0][0].length == 3) && (number_array[0][1].length == 3) && (number_array[0][2].length == 4)
-    true
+  if number_array.length == 3
+    if (number_array[0][0].length == 3) && (number_array[0][1].length == 3) && (number_array[0][2].length == 4)
+      true
+    end
   else
     false
   end
